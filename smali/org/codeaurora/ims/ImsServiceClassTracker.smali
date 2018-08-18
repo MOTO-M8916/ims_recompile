@@ -16,7 +16,7 @@
 
 
 # static fields
-.field private static final ACTION_IMS_INCOMING_CALL:Ljava/lang/String; = "com.android.ims.volte.incoming_call"
+.field private static final ACTION_IMS_INCOMING_CALL:Ljava/lang/String; = "android.telephony.ims.volte.incoming_call"
 
 .field public static final CONF_URI_DC_NUMBER:Ljava/lang/String; = "Conference Call"
 

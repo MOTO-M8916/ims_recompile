@@ -5764,7 +5764,7 @@
     .line 1170
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "com.android.imscontection.DISCONNECTED"
+    const-string/jumbo v1, "android.telephony.imscontection.DISCONNECTED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

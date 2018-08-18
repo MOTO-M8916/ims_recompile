@@ -722,7 +722,7 @@
     .line 201
     new-instance v2, Landroid/content/Intent;
 
-    const-string/jumbo v4, "com.android.ims.IMS_SERVICE_DOWN"
+    const-string/jumbo v4, "android.telephony.ims.IMS_SERVICE_DOWN"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
@@ -753,7 +753,7 @@
     :cond_3
     new-instance v2, Landroid/content/Intent;
 
-    const-string/jumbo v4, "com.android.ims.IMS_SERVICE_UP"
+    const-string/jumbo v4, "android.telephony.ims.IMS_SERVICE_UP"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
