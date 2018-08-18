@@ -88,7 +88,7 @@
 
 .field private mServiceSub:Lorg/codeaurora/ims/ImsServiceSub;
 
-.field private mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+.field private mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
 
 # direct methods
@@ -134,9 +134,9 @@
     iput-boolean v1, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mNeedIgnoreCalls:Z
 
     .line 67
-    sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->NONE:Lcom/android/internal/telephony/Call$SrvccState;
+    sget-object v0, Landroid/telephony/internal/telephony/Call$SrvccState;->NONE:Landroid/telephony/internal/telephony/Call$SrvccState;
 
-    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     .line 98
     iput p1, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mServiceClass:I
@@ -672,7 +672,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iget-object v1, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -705,17 +705,17 @@
 
     .line 964
     :pswitch_0
-    sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->STARTED:Lcom/android/internal/telephony/Call$SrvccState;
+    sget-object v0, Landroid/telephony/internal/telephony/Call$SrvccState;->STARTED:Landroid/telephony/internal/telephony/Call$SrvccState;
 
-    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     goto :goto_0
 
     .line 967
     :pswitch_1
-    sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->COMPLETED:Lcom/android/internal/telephony/Call$SrvccState;
+    sget-object v0, Landroid/telephony/internal/telephony/Call$SrvccState;->COMPLETED:Landroid/telephony/internal/telephony/Call$SrvccState;
 
-    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     .line 968
     const/4 v0, 0x1
@@ -726,17 +726,17 @@
 
     .line 971
     :pswitch_2
-    sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->FAILED:Lcom/android/internal/telephony/Call$SrvccState;
+    sget-object v0, Landroid/telephony/internal/telephony/Call$SrvccState;->FAILED:Landroid/telephony/internal/telephony/Call$SrvccState;
 
-    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     goto :goto_0
 
     .line 974
     :pswitch_3
-    sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->CANCELED:Lcom/android/internal/telephony/Call$SrvccState;
+    sget-object v0, Landroid/telephony/internal/telephony/Call$SrvccState;->CANCELED:Landroid/telephony/internal/telephony/Call$SrvccState;
 
-    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iput-object v0, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     goto :goto_0
 
@@ -1000,7 +1000,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iget-object v2, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1028,9 +1028,9 @@
     if-eq v0, v3, :cond_2
 
     .line 334
-    sget-object v1, Lcom/android/internal/telephony/Call$SrvccState;->NONE:Lcom/android/internal/telephony/Call$SrvccState;
+    sget-object v1, Landroid/telephony/internal/telephony/Call$SrvccState;->NONE:Landroid/telephony/internal/telephony/Call$SrvccState;
 
-    iput-object v1, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Lcom/android/internal/telephony/Call$SrvccState;
+    iput-object v1, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mSrvccStateFromIms:Landroid/telephony/internal/telephony/Call$SrvccState;
 
     .line 324
     :cond_1
@@ -1047,10 +1047,10 @@
     goto :goto_0
 .end method
 
-.method public createCallSession(Lcom/android/ims/ImsCallProfile;Lcom/android/ims/internal/IImsCallSessionListener;)Lorg/codeaurora/ims/ImsCallSessionImpl;
+.method public createCallSession(Landroid/telephony/ims/ImsCallProfile;Landroid/telephony/ims/internal/IImsCallSessionListener;)Lorg/codeaurora/ims/ImsCallSessionImpl;
     .locals 7
-    .param p1, "profile"    # Lcom/android/ims/ImsCallProfile;
-    .param p2, "listener"    # Lcom/android/ims/internal/IImsCallSessionListener;
+    .param p1, "profile"    # Landroid/telephony/ims/ImsCallProfile;
+    .param p2, "listener"    # Landroid/telephony/ims/internal/IImsCallSessionListener;
 
     .prologue
     .line 577
@@ -1070,7 +1070,7 @@
     move-object v5, p0
 
     .line 577
-    invoke-direct/range {v0 .. v6}, Lorg/codeaurora/ims/ImsCallSessionImpl;-><init>(Lcom/android/ims/ImsCallProfile;Lcom/android/ims/internal/IImsCallSessionListener;Lorg/codeaurora/ims/ImsSenderRxr;Landroid/content/Context;Lorg/codeaurora/ims/ImsServiceClassTracker;Z)V
+    invoke-direct/range {v0 .. v6}, Lorg/codeaurora/ims/ImsCallSessionImpl;-><init>(Landroid/telephony/ims/ImsCallProfile;Landroid/telephony/ims/internal/IImsCallSessionListener;Lorg/codeaurora/ims/ImsSenderRxr;Landroid/content/Context;Lorg/codeaurora/ims/ImsServiceClassTracker;Z)V
 
     .line 579
     .local v0, "session":Lorg/codeaurora/ims/ImsCallSessionImpl;
@@ -1508,16 +1508,16 @@
     iput v7, v5, Lorg/codeaurora/ims/CallDetails;->call_domain:I
 
     .line 363
-    new-instance v5, Lcom/android/ims/ImsReasonInfo;
+    new-instance v5, Landroid/telephony/ims/ImsReasonInfo;
 
     const/16 v7, 0x83
 
     const/4 v8, 0x0
 
-    invoke-direct {v5, v7, v8}, Lcom/android/ims/ImsReasonInfo;-><init>(II)V
+    invoke-direct {v5, v7, v8}, Landroid/telephony/ims/ImsReasonInfo;-><init>(II)V
 
     .line 362
-    iput-object v5, v1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iput-object v5, v1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     .line 364
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2334,12 +2334,12 @@
     if-eqz v4, :cond_1
 
     .line 194
-    invoke-static {p1}, Lorg/codeaurora/ims/ImsCallUtils;->getImsReasonInfo(Landroid/os/AsyncResult;)Lcom/android/ims/ImsReasonInfo;
+    invoke-static {p1}, Lorg/codeaurora/ims/ImsCallUtils;->getImsReasonInfo(Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsReasonInfo;
 
     move-result-object v3
 
     .line 195
-    .local v3, "reason":Lcom/android/ims/ImsReasonInfo;
+    .local v3, "reason":Landroid/telephony/ims/ImsReasonInfo;
     iget-object v4, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mConfHostListener:Lorg/codeaurora/ims/ImsCallSessionListenerProxy;
 
     .line 196
@@ -2348,7 +2348,7 @@
     iget-object v5, v5, Lorg/codeaurora/ims/ImsServiceClassTracker$ConferenceResult;->activeCall:Lorg/codeaurora/ims/ImsCallSessionImpl;
 
     .line 195
-    invoke-virtual {v4, v5, v3}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v4, v5, v3}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeFailed(Landroid/telephony/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     .line 197
     invoke-direct {p0}, Lorg/codeaurora/ims/ImsServiceClassTracker;->cleanupConferenceAttempt()V
@@ -2412,7 +2412,7 @@
 
     .line 208
     .end local v2    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lorg/codeaurora/ims/ImsCallSessionImpl;>;>;"
-    .end local v3    # "reason":Lcom/android/ims/ImsReasonInfo;
+    .end local v3    # "reason":Landroid/telephony/ims/ImsReasonInfo;
     :cond_1
     invoke-virtual {p0}, Lorg/codeaurora/ims/ImsServiceClassTracker;->processConferenceResult()V
 
@@ -3223,38 +3223,38 @@
 
     .line 615
     .local v2, "startOnHoldLocalTone":Z
-    new-instance v3, Lcom/android/ims/ImsSuppServiceNotification;
+    new-instance v3, Landroid/telephony/ims/ImsSuppServiceNotification;
 
-    invoke-direct {v3}, Lcom/android/ims/ImsSuppServiceNotification;-><init>()V
+    invoke-direct {v3}, Landroid/telephony/ims/ImsSuppServiceNotification;-><init>()V
 
     .line 616
-    .local v3, "suppServiceInfo":Lcom/android/ims/ImsSuppServiceNotification;
+    .local v3, "suppServiceInfo":Landroid/telephony/ims/ImsSuppServiceNotification;
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getNotificationType()I
 
     move-result v4
 
-    iput v4, v3, Lcom/android/ims/ImsSuppServiceNotification;->notificationType:I
+    iput v4, v3, Landroid/telephony/ims/ImsSuppServiceNotification;->notificationType:I
 
     .line 617
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getCode()I
 
     move-result v4
 
-    iput v4, v3, Lcom/android/ims/ImsSuppServiceNotification;->code:I
+    iput v4, v3, Landroid/telephony/ims/ImsSuppServiceNotification;->code:I
 
     .line 618
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getIndex()I
 
     move-result v4
 
-    iput v4, v3, Lcom/android/ims/ImsSuppServiceNotification;->index:I
+    iput v4, v3, Landroid/telephony/ims/ImsSuppServiceNotification;->index:I
 
     .line 619
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getNumber()Ljava/lang/String;
 
     move-result-object v4
 
-    iput-object v4, v3, Lcom/android/ims/ImsSuppServiceNotification;->number:Ljava/lang/String;
+    iput-object v4, v3, Landroid/telephony/ims/ImsSuppServiceNotification;->number:Ljava/lang/String;
 
     .line 620
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getHistoryInfo()Ljava/lang/String;
@@ -3321,12 +3321,12 @@
     invoke-static {p0, v4}, Lcom/qualcomm/ims/utils/Log;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 629
-    invoke-virtual {v0, v3, v2}, Lorg/codeaurora/ims/ImsCallSessionImpl;->updateSuppServiceInfo(Lcom/android/ims/ImsSuppServiceNotification;Z)V
+    invoke-virtual {v0, v3, v2}, Lorg/codeaurora/ims/ImsCallSessionImpl;->updateSuppServiceInfo(Landroid/telephony/ims/ImsSuppServiceNotification;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .end local v1    # "forwardedCallHistory":Ljava/lang/String;
-    .end local v3    # "suppServiceInfo":Lcom/android/ims/ImsSuppServiceNotification;
+    .end local v3    # "suppServiceInfo":Landroid/telephony/ims/ImsSuppServiceNotification;
     :goto_1
     monitor-exit v5
 
@@ -3336,7 +3336,7 @@
     .line 622
     .restart local v1    # "forwardedCallHistory":Ljava/lang/String;
     .restart local v2    # "startOnHoldLocalTone":Z
-    .restart local v3    # "suppServiceInfo":Lcom/android/ims/ImsSuppServiceNotification;
+    .restart local v3    # "suppServiceInfo":Landroid/telephony/ims/ImsSuppServiceNotification;
     :cond_2
     :try_start_1
     const-string/jumbo v4, "\r\n"
@@ -3345,7 +3345,7 @@
 
     move-result-object v4
 
-    iput-object v4, v3, Lcom/android/ims/ImsSuppServiceNotification;->history:[Ljava/lang/String;
+    iput-object v4, v3, Landroid/telephony/ims/ImsSuppServiceNotification;->history:[Ljava/lang/String;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -3355,7 +3355,7 @@
     .end local v0    # "callSession":Lorg/codeaurora/ims/ImsCallSessionImpl;
     .end local v1    # "forwardedCallHistory":Ljava/lang/String;
     .end local v2    # "startOnHoldLocalTone":Z
-    .end local v3    # "suppServiceInfo":Lcom/android/ims/ImsSuppServiceNotification;
+    .end local v3    # "suppServiceInfo":Landroid/telephony/ims/ImsSuppServiceNotification;
     :catchall_0
     move-exception v4
 
@@ -3871,7 +3871,7 @@
     iget-object v6, v6, Lorg/codeaurora/ims/ImsServiceClassTracker$ConferenceResult;->activeCall:Lorg/codeaurora/ims/ImsCallSessionImpl;
 
     .line 254
-    invoke-virtual {v5, v6}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeComplete(Lcom/android/ims/internal/IImsCallSession;)V
+    invoke-virtual {v5, v6}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeComplete(Landroid/telephony/ims/internal/IImsCallSession;)V
 
     .line 262
     :goto_1
@@ -3930,7 +3930,7 @@
     :cond_5
     iget-object v5, p0, Lorg/codeaurora/ims/ImsServiceClassTracker;->mConfHostListener:Lorg/codeaurora/ims/ImsCallSessionListenerProxy;
 
-    invoke-virtual {v5, v7}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeComplete(Lcom/android/ims/internal/IImsCallSession;)V
+    invoke-virtual {v5, v7}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeComplete(Landroid/telephony/ims/internal/IImsCallSession;)V
 
     goto :goto_1
 

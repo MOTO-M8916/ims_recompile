@@ -31,7 +31,7 @@
 
 .field private final READ_PRIVILEGED_PHONE_STATE:Ljava/lang/String;
 
-.field private final mBinder:Lcom/android/ims/internal/IImsService$Stub;
+.field private final mBinder:Landroid/telephony/ims/internal/IImsService$Stub;
 
 .field private mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
@@ -160,7 +160,7 @@
 
     invoke-direct {v0, p0}, Lorg/codeaurora/ims/ImsService$2;-><init>(Lorg/codeaurora/ims/ImsService;)V
 
-    iput-object v0, p0, Lorg/codeaurora/ims/ImsService;->mBinder:Lcom/android/ims/internal/IImsService$Stub;
+    iput-object v0, p0, Lorg/codeaurora/ims/ImsService;->mBinder:Landroid/telephony/ims/internal/IImsService$Stub;
 
     .line 55
     return-void
@@ -279,26 +279,26 @@
     if-ge v0, v1, :cond_2
 
     .line 262
-    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhone(I)Lcom/android/internal/telephony/Phone;
+    invoke-static {v0}, Landroid/telephony/internal/telephony/PhoneFactory;->getPhone(I)Landroid/telephony/internal/telephony/Phone;
 
     move-result-object v4
 
     .line 263
-    .local v4, "phone":Lcom/android/internal/telephony/Phone;
+    .local v4, "phone":Landroid/telephony/internal/telephony/Phone;
     if-eqz v4, :cond_1
 
-    invoke-virtual {v4}, Lcom/android/internal/telephony/Phone;->getRadioCapability()Lcom/android/internal/telephony/RadioCapability;
+    invoke-virtual {v4}, Landroid/telephony/internal/telephony/Phone;->getRadioCapability()Landroid/telephony/internal/telephony/RadioCapability;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
     .line 264
-    invoke-virtual {v4}, Lcom/android/internal/telephony/Phone;->getRadioCapability()Lcom/android/internal/telephony/RadioCapability;
+    invoke-virtual {v4}, Landroid/telephony/internal/telephony/Phone;->getRadioCapability()Landroid/telephony/internal/telephony/RadioCapability;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/RadioCapability;->getRadioAccessFamily()I
+    invoke-virtual {v5}, Landroid/telephony/internal/telephony/RadioCapability;->getRadioAccessFamily()I
 
     move-result v2
 
@@ -335,11 +335,11 @@
     invoke-static {p0, v5}, Lcom/qualcomm/ims/utils/Log;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 266
-    invoke-virtual {v4}, Lcom/android/internal/telephony/Phone;->getRadioCapability()Lcom/android/internal/telephony/RadioCapability;
+    invoke-virtual {v4}, Landroid/telephony/internal/telephony/Phone;->getRadioCapability()Landroid/telephony/internal/telephony/RadioCapability;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/RadioCapability;->getRadioAccessFamily()I
+    invoke-virtual {v5}, Landroid/telephony/internal/telephony/RadioCapability;->getRadioAccessFamily()I
 
     move-result v5
 
@@ -367,7 +367,7 @@
     goto :goto_0
 
     .line 272
-    .end local v4    # "phone":Lcom/android/internal/telephony/Phone;
+    .end local v4    # "phone":Landroid/telephony/internal/telephony/Phone;
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -917,7 +917,7 @@
     :cond_0
     const-string/jumbo v2, "ims"
 
-    iget-object v3, p0, Lorg/codeaurora/ims/ImsService;->mBinder:Lcom/android/ims/internal/IImsService$Stub;
+    iget-object v3, p0, Lorg/codeaurora/ims/ImsService;->mBinder:Landroid/telephony/ims/internal/IImsService$Stub;
 
     invoke-static {v2, v3}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 

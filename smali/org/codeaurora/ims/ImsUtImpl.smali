@@ -1,5 +1,5 @@
 .class public Lorg/codeaurora/ims/ImsUtImpl;
-.super Lcom/android/ims/internal/IImsUt$Stub;
+.super Landroid/telephony/ims/internal/IImsUt$Stub;
 .source "ImsUtImpl.java"
 
 
@@ -110,12 +110,12 @@
     return-object v0
 .end method
 
-.method static synthetic -wrap0(Lorg/codeaurora/ims/ImsUtImpl;Landroid/os/AsyncResult;)Lcom/android/ims/ImsReasonInfo;
+.method static synthetic -wrap0(Lorg/codeaurora/ims/ImsUtImpl;Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsReasonInfo;
     .locals 1
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    invoke-direct {p0, p1}, Lorg/codeaurora/ims/ImsUtImpl;->getImsReasonInfoFromResponseError(Landroid/os/AsyncResult;)Lcom/android/ims/ImsReasonInfo;
+    invoke-direct {p0, p1}, Lorg/codeaurora/ims/ImsUtImpl;->getImsReasonInfoFromResponseError(Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsReasonInfo;
 
     move-result-object v0
 
@@ -147,7 +147,7 @@
 
     .prologue
     .line 102
-    invoke-direct {p0}, Lcom/android/ims/internal/IImsUt$Stub;-><init>()V
+    invoke-direct {p0}, Landroid/telephony/ims/internal/IImsUt$Stub;-><init>()V
 
     .line 90
     const-string/jumbo v0, "android.permission.MODIFY_PHONE_STATE"
@@ -405,7 +405,7 @@
     return v0
 .end method
 
-.method private getImsReasonInfoFromResponseError(Landroid/os/AsyncResult;)Lcom/android/ims/ImsReasonInfo;
+.method private getImsReasonInfoFromResponseError(Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsReasonInfo;
     .locals 7
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
@@ -461,12 +461,12 @@
 
     .line 606
     .local v0, "code":I
-    new-instance v3, Lcom/android/ims/ImsReasonInfo;
+    new-instance v3, Landroid/telephony/ims/ImsReasonInfo;
 
-    invoke-direct {v3, v0, v6}, Lcom/android/ims/ImsReasonInfo;-><init>(II)V
+    invoke-direct {v3, v0, v6}, Landroid/telephony/ims/ImsReasonInfo;-><init>(II)V
 
     .line 608
-    .local v3, "genericError":Lcom/android/ims/ImsReasonInfo;
+    .local v3, "genericError":Landroid/telephony/ims/ImsReasonInfo;
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     check-cast v2, Ljava/lang/RuntimeException;
@@ -537,9 +537,9 @@
     invoke-static {p0, v4}, Lcom/qualcomm/ims/utils/Log;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 630
-    new-instance v4, Lcom/android/ims/ImsReasonInfo;
+    new-instance v4, Landroid/telephony/ims/ImsReasonInfo;
 
-    invoke-direct {v4, v0, v6}, Lcom/android/ims/ImsReasonInfo;-><init>(II)V
+    invoke-direct {v4, v0, v6}, Landroid/telephony/ims/ImsReasonInfo;-><init>(II)V
 
     return-object v4
 
@@ -1170,9 +1170,9 @@
     return v0
 .end method
 
-.method public setListener(Lcom/android/ims/internal/IImsUtListener;)V
+.method public setListener(Landroid/telephony/ims/internal/IImsUtListener;)V
     .locals 3
-    .param p1, "listener"    # Lcom/android/ims/internal/IImsUtListener;
+    .param p1, "listener"    # Landroid/telephony/ims/internal/IImsUtListener;
 
     .prologue
     .line 561
@@ -1187,7 +1187,7 @@
     .line 562
     iget-object v0, p0, Lorg/codeaurora/ims/ImsUtImpl;->mListenerProxy:Lorg/codeaurora/ims/ImsUtListenerProxy;
 
-    iput-object p1, v0, Lorg/codeaurora/ims/ImsUtListenerProxy;->mListener:Lcom/android/ims/internal/IImsUtListener;
+    iput-object p1, v0, Lorg/codeaurora/ims/ImsUtListenerProxy;->mListener:Landroid/telephony/ims/internal/IImsUtListener;
 
     .line 560
     return-void

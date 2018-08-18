@@ -206,14 +206,14 @@
 
     .prologue
     .line 118
-    invoke-static {p1}, Lcom/android/ims/ImsManager;->isWfcEnabledByUser(Landroid/content/Context;)Z
+    invoke-static {p1}, Landroid/telephony/ims/ImsManager;->isWfcEnabledByUser(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 119
-    invoke-static {p1}, Lcom/android/ims/ImsManager;->isNonTtyOrTtyOnVolteEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Landroid/telephony/ims/ImsManager;->isNonTtyOrTtyOnVolteEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -425,7 +425,7 @@
 
     .line 78
     :cond_2
-    invoke-static {p1}, Lcom/android/ims/ImsManager;->isWfcEnabledByPlatform(Landroid/content/Context;)Z
+    invoke-static {p1}, Landroid/telephony/ims/ImsManager;->isWfcEnabledByPlatform(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -441,14 +441,14 @@
 
     .line 83
     :cond_3
-    invoke-static {p1}, Lcom/android/ims/ImsManager;->isWfcEnabledByUser(Landroid/content/Context;)Z
+    invoke-static {p1}, Landroid/telephony/ims/ImsManager;->isWfcEnabledByUser(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
     .line 84
-    invoke-static {p1}, Lcom/android/ims/ImsManager;->isNonTtyOrTtyOnVolteEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Landroid/telephony/ims/ImsManager;->isNonTtyOrTtyOnVolteEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -458,7 +458,7 @@
     if-eqz v2, :cond_5
 
     :goto_2
-    invoke-static {p1, v3}, Lcom/android/ims/ImsManager;->setWfcSetting(Landroid/content/Context;Z)V
+    invoke-static {p1, v3}, Landroid/telephony/ims/ImsManager;->setWfcSetting(Landroid/content/Context;Z)V
 
     .line 87
     invoke-direct {p0, p1}, Lorg/codeaurora/ims/WifiCallingQuickSettingsReceiver;->sendIntentToUpdateQSTile(Landroid/content/Context;)V

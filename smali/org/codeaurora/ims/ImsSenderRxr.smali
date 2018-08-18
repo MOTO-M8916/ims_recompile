@@ -9586,16 +9586,16 @@
     iput-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->number:Ljava/lang/String;
 
     .line 2736
-    new-instance v12, Lcom/android/ims/ImsReasonInfo;
+    new-instance v12, Landroid/telephony/ims/ImsReasonInfo;
 
     const/4 v13, 0x0
 
     const/4 v14, 0x0
 
-    invoke-direct {v12, v13, v14}, Lcom/android/ims/ImsReasonInfo;-><init>(II)V
+    invoke-direct {v12, v13, v14}, Landroid/telephony/ims/ImsReasonInfo;-><init>(II)V
 
     .line 2735
-    iput-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iput-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     .line 2738
     invoke-virtual {v0}, Lorg/codeaurora/ims/ImsQmiIF$CallList$Call;->hasFailCause()Z
@@ -9683,7 +9683,7 @@
     if-eqz v12, :cond_5
 
     .line 2758
-    iget-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     .line 2759
     invoke-virtual {v0}, Lorg/codeaurora/ims/ImsQmiIF$CallList$Call;->getFailCause()Lorg/codeaurora/ims/ImsQmiIF$CallFailCauseResponse;
@@ -9695,7 +9695,7 @@
     move-result v13
 
     .line 2758
-    iput v13, v12, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iput v13, v12, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     .line 2760
     invoke-virtual {v0}, Lorg/codeaurora/ims/ImsQmiIF$CallList$Call;->getFailCause()Lorg/codeaurora/ims/ImsQmiIF$CallFailCauseResponse;
@@ -9709,7 +9709,7 @@
     if-eqz v12, :cond_2
 
     .line 2761
-    iget-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     .line 2762
     invoke-virtual {v0}, Lorg/codeaurora/ims/ImsQmiIF$CallList$Call;->getFailCause()Lorg/codeaurora/ims/ImsQmiIF$CallFailCauseResponse;
@@ -9725,7 +9725,7 @@
     move-result v13
 
     .line 2761
-    iput v13, v12, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iput v13, v12, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
     .line 2765
     :cond_2
@@ -9743,9 +9743,9 @@
     if-eqz v7, :cond_3
 
     .line 2769
-    iget-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v12, v2, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iput-object v7, v12, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iput-object v7, v12, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     .line 2776
     :cond_3
@@ -10188,7 +10188,7 @@
     const/4 v5, 0x0
 
     .line 2234
-    .local v5, "infos":[Lcom/android/internal/telephony/CallForwardInfo;
+    .local v5, "infos":[Landroid/telephony/internal/telephony/CallForwardInfo;
     const/4 v8, 0x0
 
     .line 2235
@@ -10212,10 +10212,10 @@
     move-result v6
 
     .line 2242
-    new-array v5, v6, [Lcom/android/internal/telephony/CallForwardInfo;
+    new-array v5, v6, [Landroid/telephony/internal/telephony/CallForwardInfo;
 
     .line 2243
-    .local v5, "infos":[Lcom/android/internal/telephony/CallForwardInfo;
+    .local v5, "infos":[Landroid/telephony/internal/telephony/CallForwardInfo;
     new-array v8, v6, [Lorg/codeaurora/ims/ImsCallForwardTimerInfo;
 
     .line 2244
@@ -10233,9 +10233,9 @@
 
     .line 2248
     .local v0, "callInfo":Lorg/codeaurora/ims/ImsQmiIF$CallForwardInfoList$CallForwardInfo;
-    new-instance v9, Lcom/android/internal/telephony/CallForwardInfo;
+    new-instance v9, Landroid/telephony/internal/telephony/CallForwardInfo;
 
-    invoke-direct {v9}, Lcom/android/internal/telephony/CallForwardInfo;-><init>()V
+    invoke-direct {v9}, Landroid/telephony/internal/telephony/CallForwardInfo;-><init>()V
 
     aput-object v9, v5, v3
 
@@ -10246,7 +10246,7 @@
 
     move-result v10
 
-    iput v10, v9, Lcom/android/internal/telephony/CallForwardInfo;->status:I
+    iput v10, v9, Landroid/telephony/internal/telephony/CallForwardInfo;->status:I
 
     .line 2250
     aget-object v9, v5, v3
@@ -10255,7 +10255,7 @@
 
     move-result v10
 
-    iput v10, v9, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
+    iput v10, v9, Landroid/telephony/internal/telephony/CallForwardInfo;->reason:I
 
     .line 2251
     aget-object v9, v5, v3
@@ -10264,7 +10264,7 @@
 
     move-result v10
 
-    iput v10, v9, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
+    iput v10, v9, Landroid/telephony/internal/telephony/CallForwardInfo;->serviceClass:I
 
     .line 2252
     aget-object v9, v5, v3
@@ -10273,7 +10273,7 @@
 
     move-result v10
 
-    iput v10, v9, Lcom/android/internal/telephony/CallForwardInfo;->toa:I
+    iput v10, v9, Landroid/telephony/internal/telephony/CallForwardInfo;->toa:I
 
     .line 2253
     aget-object v9, v5, v3
@@ -10282,7 +10282,7 @@
 
     move-result-object v10
 
-    iput-object v10, v9, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
+    iput-object v10, v9, Landroid/telephony/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
 
     .line 2254
     aget-object v9, v5, v3
@@ -10291,7 +10291,7 @@
 
     move-result v10
 
-    iput v10, v9, Lcom/android/internal/telephony/CallForwardInfo;->timeSeconds:I
+    iput v10, v9, Landroid/telephony/internal/telephony/CallForwardInfo;->timeSeconds:I
 
     .line 2255
     invoke-virtual {v0}, Lorg/codeaurora/ims/ImsQmiIF$CallForwardInfoList$CallForwardInfo;->hasCallFwdTimerStart()Z
@@ -10419,7 +10419,7 @@
     .end local v0    # "callInfo":Lorg/codeaurora/ims/ImsQmiIF$CallForwardInfoList$CallForwardInfo;
     .end local v3    # "i":I
     .end local v4    # "infoList":Lorg/codeaurora/ims/ImsQmiIF$CallForwardInfoList;
-    .end local v5    # "infos":[Lcom/android/internal/telephony/CallForwardInfo;
+    .end local v5    # "infos":[Landroid/telephony/internal/telephony/CallForwardInfo;
     .end local v8    # "timerInfo":[Lorg/codeaurora/ims/ImsCallForwardTimerInfo;
     :catch_0
     move-exception v2
@@ -10437,14 +10437,14 @@
     return-object v5
 
     .line 2278
-    .local v5, "infos":[Lcom/android/internal/telephony/CallForwardInfo;
+    .local v5, "infos":[Landroid/telephony/internal/telephony/CallForwardInfo;
     .local v8, "timerInfo":[Lorg/codeaurora/ims/ImsCallForwardTimerInfo;
     :cond_2
     const/4 v9, 0x0
 
-    new-array v5, v9, [Lcom/android/internal/telephony/CallForwardInfo;
+    new-array v5, v9, [Landroid/telephony/internal/telephony/CallForwardInfo;
 
-    .local v5, "infos":[Lcom/android/internal/telephony/CallForwardInfo;
+    .local v5, "infos":[Landroid/telephony/internal/telephony/CallForwardInfo;
     goto :goto_1
 .end method
 

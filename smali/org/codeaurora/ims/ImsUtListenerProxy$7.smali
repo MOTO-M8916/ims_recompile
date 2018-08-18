@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/codeaurora/ims/ImsUtListenerProxy;->utConfigurationCallWaitingQueried(Lcom/android/ims/internal/IImsUt;I[Lcom/android/ims/ImsSsInfo;)V
+    value = Lorg/codeaurora/ims/ImsUtListenerProxy;->utConfigurationCallWaitingQueried(Landroid/telephony/ims/internal/IImsUt;I[Landroid/telephony/ims/ImsSsInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,30 +20,30 @@
 # instance fields
 .field final synthetic this$0:Lorg/codeaurora/ims/ImsUtListenerProxy;
 
-.field final synthetic val$cwInfo:[Lcom/android/ims/ImsSsInfo;
+.field final synthetic val$cwInfo:[Landroid/telephony/ims/ImsSsInfo;
 
 .field final synthetic val$id:I
 
-.field final synthetic val$ut:Lcom/android/ims/internal/IImsUt;
+.field final synthetic val$ut:Landroid/telephony/ims/internal/IImsUt;
 
 
 # direct methods
-.method constructor <init>(Lorg/codeaurora/ims/ImsUtListenerProxy;Lcom/android/ims/internal/IImsUt;I[Lcom/android/ims/ImsSsInfo;)V
+.method constructor <init>(Lorg/codeaurora/ims/ImsUtListenerProxy;Landroid/telephony/ims/internal/IImsUt;I[Landroid/telephony/ims/ImsSsInfo;)V
     .locals 0
     .param p1, "this$0"    # Lorg/codeaurora/ims/ImsUtListenerProxy;
-    .param p2, "val$ut"    # Lcom/android/ims/internal/IImsUt;
+    .param p2, "val$ut"    # Landroid/telephony/ims/internal/IImsUt;
     .param p3, "val$id"    # I
-    .param p4, "val$cwInfo"    # [Lcom/android/ims/ImsSsInfo;
+    .param p4, "val$cwInfo"    # [Landroid/telephony/ims/ImsSsInfo;
 
     .prologue
     .line 144
     iput-object p1, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->this$0:Lorg/codeaurora/ims/ImsUtListenerProxy;
 
-    iput-object p2, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$ut:Lcom/android/ims/internal/IImsUt;
+    iput-object p2, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$ut:Landroid/telephony/ims/internal/IImsUt;
 
     iput p3, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$id:I
 
-    iput-object p4, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$cwInfo:[Lcom/android/ims/ImsSsInfo;
+    iput-object p4, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$cwInfo:[Landroid/telephony/ims/ImsSsInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,15 +60,15 @@
     :try_start_0
     iget-object v1, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->this$0:Lorg/codeaurora/ims/ImsUtListenerProxy;
 
-    iget-object v1, v1, Lorg/codeaurora/ims/ImsUtListenerProxy;->mListener:Lcom/android/ims/internal/IImsUtListener;
+    iget-object v1, v1, Lorg/codeaurora/ims/ImsUtListenerProxy;->mListener:Landroid/telephony/ims/internal/IImsUtListener;
 
-    iget-object v2, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$ut:Lcom/android/ims/internal/IImsUt;
+    iget-object v2, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$ut:Landroid/telephony/ims/internal/IImsUt;
 
     iget v3, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$id:I
 
-    iget-object v4, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$cwInfo:[Lcom/android/ims/ImsSsInfo;
+    iget-object v4, p0, Lorg/codeaurora/ims/ImsUtListenerProxy$7;->val$cwInfo:[Landroid/telephony/ims/ImsSsInfo;
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/android/ims/internal/IImsUtListener;->utConfigurationCallWaitingQueried(Lcom/android/ims/internal/IImsUt;I[Lcom/android/ims/ImsSsInfo;)V
+    invoke-interface {v1, v2, v3, v4}, Landroid/telephony/ims/internal/IImsUtListener;->utConfigurationCallWaitingQueried(Landroid/telephony/ims/internal/IImsUt;I[Landroid/telephony/ims/ImsSsInfo;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

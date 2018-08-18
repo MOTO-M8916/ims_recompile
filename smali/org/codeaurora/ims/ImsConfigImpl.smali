@@ -1,5 +1,5 @@
 .class public Lorg/codeaurora/ims/ImsConfigImpl;
-.super Lcom/android/ims/internal/IImsConfig$Stub;
+.super Landroid/telephony/ims/internal/IImsConfig$Stub;
 .source "ImsConfigImpl.java"
 
 
@@ -37,12 +37,12 @@
 
 
 # direct methods
-.method static synthetic -wrap0(Lorg/codeaurora/ims/ImsConfigImpl;Landroid/os/AsyncResult;)Lcom/android/ims/ImsConfigListener;
+.method static synthetic -wrap0(Lorg/codeaurora/ims/ImsConfigImpl;Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsConfigListener;
     .locals 1
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    invoke-direct {p0, p1}, Lorg/codeaurora/ims/ImsConfigImpl;->getImsConfigListener(Landroid/os/AsyncResult;)Lcom/android/ims/ImsConfigListener;
+    invoke-direct {p0, p1}, Lorg/codeaurora/ims/ImsConfigImpl;->getImsConfigListener(Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsConfigListener;
 
     move-result-object v0
 
@@ -60,35 +60,35 @@
     return-void
 .end method
 
-.method static synthetic -wrap2(Lorg/codeaurora/ims/ImsConfigImpl;Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method static synthetic -wrap2(Lorg/codeaurora/ims/ImsConfigImpl;Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 0
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    invoke-direct {p0, p1, p2}, Lorg/codeaurora/ims/ImsConfigImpl;->onGetWifiCallingStatusDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+    invoke-direct {p0, p1, p2}, Lorg/codeaurora/ims/ImsConfigImpl;->onGetWifiCallingStatusDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
 
     return-void
 .end method
 
-.method static synthetic -wrap3(Lorg/codeaurora/ims/ImsConfigImpl;Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method static synthetic -wrap3(Lorg/codeaurora/ims/ImsConfigImpl;Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 0
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    invoke-direct {p0, p1, p2}, Lorg/codeaurora/ims/ImsConfigImpl;->onSetFeatureResponseDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+    invoke-direct {p0, p1, p2}, Lorg/codeaurora/ims/ImsConfigImpl;->onSetFeatureResponseDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
 
     return-void
 .end method
 
-.method static synthetic -wrap4(Lorg/codeaurora/ims/ImsConfigImpl;Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method static synthetic -wrap4(Lorg/codeaurora/ims/ImsConfigImpl;Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 0
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    invoke-direct {p0, p1, p2}, Lorg/codeaurora/ims/ImsConfigImpl;->onSetWifiCallingStatusDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+    invoke-direct {p0, p1, p2}, Lorg/codeaurora/ims/ImsConfigImpl;->onSetWifiCallingStatusDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
 
     return-void
 .end method
@@ -100,7 +100,7 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/ims/internal/IImsConfig$Stub;-><init>()V
+    invoke-direct {p0}, Landroid/telephony/ims/internal/IImsConfig$Stub;-><init>()V
 
     .line 37
     const-string/jumbo v1, "android.permission.MODIFY_PHONE_STATE"
@@ -188,7 +188,7 @@
     return-void
 .end method
 
-.method private getImsConfigListener(Landroid/os/AsyncResult;)Lcom/android/ims/ImsConfigListener;
+.method private getImsConfigListener(Landroid/os/AsyncResult;)Landroid/telephony/ims/ImsConfigListener;
     .locals 2
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
@@ -216,14 +216,14 @@
     :cond_1
     iget-object v0, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    instance-of v0, v0, Lcom/android/ims/ImsConfigListener;
+    instance-of v0, v0, Landroid/telephony/ims/ImsConfigListener;
 
     if-eqz v0, :cond_2
 
     .line 181
     iget-object v0, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/ims/ImsConfigListener;
+    check-cast v0, Landroid/telephony/ims/ImsConfigListener;
 
     return-object v0
 
@@ -240,9 +240,9 @@
 
     check-cast v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;
 
-    iget-object v0, v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;->listener:Lcom/android/ims/ImsConfigListener;
+    iget-object v0, v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;->listener:Landroid/telephony/ims/ImsConfigListener;
 
-    instance-of v0, v0, Lcom/android/ims/ImsConfigListener;
+    instance-of v0, v0, Landroid/telephony/ims/ImsConfigListener;
 
     .line 182
     if-eqz v0, :cond_0
@@ -252,7 +252,7 @@
 
     check-cast v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;
 
-    iget-object v0, v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;->listener:Lcom/android/ims/ImsConfigListener;
+    iget-object v0, v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;->listener:Landroid/telephony/ims/ImsConfigListener;
 
     return-object v0
 .end method
@@ -286,10 +286,10 @@
     .line 101
     iget-object v0, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/internal/os/SomeArgs;
+    check-cast v0, Landroid/telephony/internal/os/SomeArgs;
 
     .line 102
-    .local v0, "response":Lcom/android/internal/os/SomeArgs;
+    .local v0, "response":Landroid/telephony/internal/os/SomeArgs;
     iget-object v1, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v1, :cond_0
@@ -305,12 +305,12 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    iput-object v1, v0, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     .line 103
     iget-object v1, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+    iput-object v1, v0, Landroid/telephony/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
     .line 104
     monitor-enter v0
@@ -322,7 +322,7 @@
     invoke-static {p0, v1}, Lcom/qualcomm/ims/utils/Log;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 106
-    invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->notifyAll()V
+    invoke-virtual {v0}, Landroid/telephony/internal/os/SomeArgs;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -346,9 +346,9 @@
     throw v1
 .end method
 
-.method private onGetPacketCountDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method private onGetPacketCountDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 6
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
@@ -443,9 +443,9 @@
     goto :goto_1
 .end method
 
-.method private onGetPacketErrorCountDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method private onGetPacketErrorCountDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 6
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
@@ -540,9 +540,9 @@
     goto :goto_1
 .end method
 
-.method private onGetWifiCallingStatusDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method private onGetWifiCallingStatusDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 5
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
@@ -607,9 +607,9 @@
     goto :goto_1
 .end method
 
-.method private onSetFeatureResponseDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method private onSetFeatureResponseDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 6
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
@@ -643,7 +643,7 @@
 
     iget v5, v0, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;->value:I
 
-    invoke-interface {p1, v3, v4, v5, v1}, Lcom/android/ims/ImsConfigListener;->onSetFeatureResponse(IIII)V
+    invoke-interface {p1, v3, v4, v5, v1}, Landroid/telephony/ims/ImsConfigListener;->onSetFeatureResponse(IIII)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -697,9 +697,9 @@
     goto :goto_1
 .end method
 
-.method private onSetWifiCallingStatusDone(Lcom/android/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
+.method private onSetWifiCallingStatusDone(Landroid/telephony/ims/ImsConfigListener;Landroid/os/AsyncResult;)V
     .locals 4
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
@@ -768,18 +768,18 @@
 
     .prologue
     .line 256
-    invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
+    invoke-static {}, Landroid/telephony/internal/os/SomeArgs;->obtain()Landroid/telephony/internal/os/SomeArgs;
 
     move-result-object v10
 
     .line 258
-    .local v10, "request":Lcom/android/internal/os/SomeArgs;
+    .local v10, "request":Landroid/telephony/internal/os/SomeArgs;
     :try_start_0
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    iput-object v0, v10, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+    iput-object v0, v10, Landroid/telephony/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     .line 259
     iget-object v0, p0, Lorg/codeaurora/ims/ImsConfigImpl;->mCi:Lorg/codeaurora/ims/ImsSenderRxr;
@@ -818,7 +818,7 @@
     .line 264
     :goto_0
     :try_start_1
-    iget-object v0, v10, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    iget-object v0, v10, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -826,7 +826,7 @@
 
     .line 266
     :try_start_2
-    invoke-virtual {v10}, Lcom/android/internal/os/SomeArgs;->wait()V
+    invoke-virtual {v10}, Landroid/telephony/internal/os/SomeArgs;->wait()V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -872,7 +872,7 @@
 
     move-result-object v0
 
-    iput-object v0, v10, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    iput-object v0, v10, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -890,11 +890,11 @@
 
 
 # virtual methods
-.method public getFeatureValue(IILcom/android/ims/ImsConfigListener;)V
+.method public getFeatureValue(IILandroid/telephony/ims/ImsConfigListener;)V
     .locals 1
     .param p1, "feature"    # I
     .param p2, "network"    # I
-    .param p3, "listener"    # Lcom/android/ims/ImsConfigListener;
+    .param p3, "listener"    # Landroid/telephony/ims/ImsConfigListener;
 
     .prologue
     .line 341
@@ -977,11 +977,11 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/internal/os/SomeArgs;
+    check-cast v7, Landroid/telephony/internal/os/SomeArgs;
 
     .line 301
-    .local v7, "result":Lcom/android/internal/os/SomeArgs;
-    iget-object v0, v7, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    .local v7, "result":Landroid/telephony/internal/os/SomeArgs;
+    iget-object v0, v7, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -996,14 +996,14 @@
 
     .line 303
     :goto_0
-    invoke-virtual {v7}, Lcom/android/internal/os/SomeArgs;->recycle()V
+    invoke-virtual {v7}, Landroid/telephony/internal/os/SomeArgs;->recycle()V
 
     .line 304
     return-object v8
 
     .line 302
     :cond_1
-    iget-object v8, v7, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+    iget-object v8, v7, Landroid/telephony/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
     check-cast v8, Ljava/lang/String;
 
@@ -1058,11 +1058,11 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/internal/os/SomeArgs;
+    check-cast v7, Landroid/telephony/internal/os/SomeArgs;
 
     .line 287
-    .local v7, "result":Lcom/android/internal/os/SomeArgs;
-    iget-object v0, v7, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    .local v7, "result":Landroid/telephony/internal/os/SomeArgs;
+    iget-object v0, v7, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -1078,7 +1078,7 @@
     .line 289
     .local v8, "retVal":I
     :goto_0
-    invoke-virtual {v7}, Lcom/android/internal/os/SomeArgs;->recycle()V
+    invoke-virtual {v7}, Landroid/telephony/internal/os/SomeArgs;->recycle()V
 
     .line 290
     return v8
@@ -1086,7 +1086,7 @@
     .line 288
     .end local v8    # "retVal":I
     :cond_1
-    iget-object v0, v7, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+    iget-object v0, v7, Landroid/telephony/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -1098,9 +1098,9 @@
     goto :goto_0
 .end method
 
-.method public getVideoQuality(Lcom/android/ims/ImsConfigListener;)V
+.method public getVideoQuality(Landroid/telephony/ims/ImsConfigListener;)V
     .locals 1
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
 
     .prologue
     .line 202
@@ -1132,9 +1132,9 @@
     return v0
 .end method
 
-.method public getWifiCallingPreference(Lcom/android/ims/ImsConfigListener;)V
+.method public getWifiCallingPreference(Landroid/telephony/ims/ImsConfigListener;)V
     .locals 3
-    .param p1, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p1, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
 
     .prologue
     .line 219
@@ -1164,12 +1164,12 @@
     return-void
 .end method
 
-.method public setFeatureValue(IIILcom/android/ims/ImsConfigListener;)V
+.method public setFeatureValue(IIILandroid/telephony/ims/ImsConfigListener;)V
     .locals 8
     .param p1, "feature"    # I
     .param p2, "network"    # I
     .param p3, "value"    # I
-    .param p4, "listener"    # Lcom/android/ims/ImsConfigListener;
+    .param p4, "listener"    # Landroid/telephony/ims/ImsConfigListener;
 
     .prologue
     const/16 v7, 0x12
@@ -1276,7 +1276,7 @@
     .line 371
     new-instance v5, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;
 
-    invoke-direct {v5, p1, p2, p3, p4}, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;-><init>(IIILcom/android/ims/ImsConfigListener;)V
+    invoke-direct {v5, p1, p2, p3, p4}, Lorg/codeaurora/ims/ImsConfigImpl$FeatureAccessWrapper;-><init>(IIILandroid/telephony/ims/ImsConfigListener;)V
 
     .line 370
     const/4 v6, 0x2
@@ -1348,11 +1348,11 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/internal/os/SomeArgs;
+    check-cast v7, Landroid/telephony/internal/os/SomeArgs;
 
     .line 334
-    .local v7, "result":Lcom/android/internal/os/SomeArgs;
-    iget-object v0, v7, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    .local v7, "result":Landroid/telephony/internal/os/SomeArgs;
+    iget-object v0, v7, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -1362,7 +1362,7 @@
 
     .line 335
     .local v8, "retVal":I
-    invoke-virtual {v7}, Lcom/android/internal/os/SomeArgs;->recycle()V
+    invoke-virtual {v7}, Landroid/telephony/internal/os/SomeArgs;->recycle()V
 
     .line 336
     return v8
@@ -1434,11 +1434,11 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/internal/os/SomeArgs;
+    check-cast v7, Landroid/telephony/internal/os/SomeArgs;
 
     .line 320
-    .local v7, "result":Lcom/android/internal/os/SomeArgs;
-    iget-object v0, v7, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    .local v7, "result":Landroid/telephony/internal/os/SomeArgs;
+    iget-object v0, v7, Landroid/telephony/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -1448,16 +1448,16 @@
 
     .line 321
     .local v8, "retVal":I
-    invoke-virtual {v7}, Lcom/android/internal/os/SomeArgs;->recycle()V
+    invoke-virtual {v7}, Landroid/telephony/internal/os/SomeArgs;->recycle()V
 
     .line 322
     return v8
 .end method
 
-.method public setVideoQuality(ILcom/android/ims/ImsConfigListener;)V
+.method public setVideoQuality(ILandroid/telephony/ims/ImsConfigListener;)V
     .locals 3
     .param p1, "quality"    # I
-    .param p2, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p2, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
 
     .prologue
     .line 209
@@ -1478,11 +1478,11 @@
     return-void
 .end method
 
-.method public setWifiCallingPreference(IILcom/android/ims/ImsConfigListener;)V
+.method public setWifiCallingPreference(IILandroid/telephony/ims/ImsConfigListener;)V
     .locals 3
     .param p1, "wifiCallingStatus"    # I
     .param p2, "wifiCallingPreference"    # I
-    .param p3, "imsConfigListener"    # Lcom/android/ims/ImsConfigListener;
+    .param p3, "imsConfigListener"    # Landroid/telephony/ims/ImsConfigListener;
 
     .prologue
     .line 231

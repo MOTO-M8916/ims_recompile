@@ -1,5 +1,5 @@
 .class public Lorg/codeaurora/ims/DriverCallIms;
-.super Lcom/android/internal/telephony/DriverCall;
+.super Landroid/telephony/internal/telephony/DriverCall;
 .source "DriverCallIms.java"
 
 
@@ -38,7 +38,7 @@
 # instance fields
 .field public callDetails:Lorg/codeaurora/ims/CallDetails;
 
-.field public callFailCause:Lcom/android/ims/ImsReasonInfo;
+.field public callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
 .field public historyInfo:Ljava/lang/String;
 
@@ -57,7 +57,7 @@
 
     .prologue
     .line 95
-    invoke-direct {p0}, Lcom/android/internal/telephony/DriverCall;-><init>()V
+    invoke-direct {p0}, Landroid/telephony/internal/telephony/DriverCall;-><init>()V
 
     .line 96
     new-instance v0, Lorg/codeaurora/ims/CallDetails;
@@ -81,7 +81,7 @@
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/internal/telephony/DriverCall;-><init>()V
+    invoke-direct {p0}, Landroid/telephony/internal/telephony/DriverCall;-><init>()V
 
     .line 74
     new-instance v0, Lorg/codeaurora/ims/CallDetails;
@@ -93,26 +93,26 @@
     iput-object v0, p0, Lorg/codeaurora/ims/DriverCallIms;->callDetails:Lorg/codeaurora/ims/CallDetails;
 
     .line 75
-    new-instance v0, Lcom/android/ims/ImsReasonInfo;
+    new-instance v0, Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v1, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v1, v1, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v1, v1, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     .line 76
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v2, v2, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iget v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
     .line 77
-    iget-object v3, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v3, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v3, v3, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v3, v3, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     .line 75
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    iput-object v0, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iput-object v0, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     .line 78
     iget-object v0, p1, Lorg/codeaurora/ims/DriverCallIms;->state:Lorg/codeaurora/ims/DriverCallIms$State;
@@ -198,7 +198,7 @@
     .param p0, "state"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Lcom/android/internal/telephony/ATParseEx;
+            Landroid/telephony/internal/telephony/ATParseEx;
         }
     .end annotation
 
@@ -207,7 +207,7 @@
     packed-switch p0, :pswitch_data_0
 
     .line 117
-    new-instance v0, Lcom/android/internal/telephony/ATParseEx;
+    new-instance v0, Landroid/telephony/internal/telephony/ATParseEx;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -227,7 +227,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/internal/telephony/ATParseEx;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroid/telephony/internal/telephony/ATParseEx;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -547,9 +547,9 @@
     move-result-object v0
 
     .line 200
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v1, v1, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v1, v1, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     .line 193
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -573,9 +573,9 @@
     move-result-object v0
 
     .line 201
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v1, v1, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v1, v1, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     .line 193
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -759,36 +759,36 @@
 
     .line 153
     :cond_5
-    iget-object v1, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     if-eqz v1, :cond_6
 
     .line 154
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     if-nez v1, :cond_b
 
     .line 155
-    new-instance v1, Lcom/android/ims/ImsReasonInfo;
+    new-instance v1, Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v2, v2, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     .line 156
-    iget-object v3, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v3, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v3, v3, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iget v3, v3, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
     .line 157
-    iget-object v4, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v4, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v4, v4, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v4, v4, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     .line 155
-    invoke-direct {v1, v2, v3, v4}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    iput-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iput-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
     .line 170
     :cond_6
@@ -864,66 +864,66 @@
 
     .line 159
     :cond_b
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v1, v1, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v1, v1, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v2, v2, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     if-eq v1, v2, :cond_c
 
     .line 160
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v2, v2, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
-    iput v2, v1, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iput v2, v1, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     .line 162
     :cond_c
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v1, v1, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iget v1, v1, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v2, v2, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iget v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
     if-eq v1, v2, :cond_d
 
     .line 163
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget v2, v2, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iget v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
-    iput v2, v1, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
+    iput v2, v1, Landroid/telephony/ims/ImsReasonInfo;->mExtraCode:I
 
     .line 165
     :cond_d
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v1, v1, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v1, v1, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v2, v2, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     if-eq v1, v2, :cond_6
 
     .line 166
-    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v1, p0, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Lcom/android/ims/ImsReasonInfo;
+    iget-object v2, p1, Lorg/codeaurora/ims/DriverCallIms;->callFailCause:Landroid/telephony/ims/ImsReasonInfo;
 
-    iget-object v2, v2, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v2, v2, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iput-object v2, v1, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     goto :goto_0
 .end method
